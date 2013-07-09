@@ -7,9 +7,7 @@ var buffer_in = fs.readFileSync('index.html');
 var word = buffer_in.toString('utf8', 0, buffer_in.length);
 
 app.get('/', function(request, response) {
-  //response.send('Hello World2!');
   response.send(word);
-  response.send('test');
 });
 
 var port = process.env.PORT || 5000;
